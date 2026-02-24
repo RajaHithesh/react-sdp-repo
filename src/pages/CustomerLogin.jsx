@@ -29,6 +29,8 @@ const CustomerLogin = () => {
     if (customer) 
     {
       sessionStorage.setItem('isCustomer', 'true');
+      // save the logged-in customer for use on the customer home page
+      sessionStorage.setItem('customer', JSON.stringify(customer));
       alert(`Login successful! Welcome, ${customer.fullName}!`);
       console.log('Login successful:', customer);
       setFormData({
