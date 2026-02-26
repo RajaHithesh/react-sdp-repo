@@ -3,10 +3,11 @@ import { Link, Routes, Route, useNavigate } from 'react-router-dom';
 import './manager.css';
 import ManagerHome from './ManagerHome';
 import AddEvent from './AddEvent';
-import ViewEventsByManager from './ViewEventsByManager';
+
 import UpdateEvent from './UpdateEvent';
 import ViewBookings from './ViewBookings';
 import ManagerLogout from './ManagerLogout';
+import ViewEventsByManager from './ViewEventsByManager';
 
 export default function ManagerNavBar() {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ export default function ManagerNavBar() {
       <div className="manager-content">
         <Routes>
           <Route path="/manager/home" element={<ManagerHome />} />
-          <Route path="/manager/view-events" element={<ViewEventsByManager />} />
+          <Route path='/manager/view-events' element={<ViewEventsByManager/>}/>
           <Route path="/manager/add-event" element={<AddEvent />} />
           <Route path="/manager/update-event" element={<UpdateEvent />} />
           <Route path="/manager/view-bookings" element={<ViewBookings />} />
